@@ -87,7 +87,7 @@ import configurationTypes from '../store/modules/configuration/types';
 const linksData = [
   {
     title: 'Inicio',
-    caption: 'Visualiza los negocios destacados',
+    caption: 'Acá no hay nada por ahora',
     icon: 'home',
     link: '/home',
   },
@@ -138,12 +138,6 @@ if (user) {
         caption: 'Gestiona los productos',
         icon: 'inbox',
         link: '/product',
-      },
-      {
-        title: 'Usuarios',
-        caption: 'Crea y modifica usuarios',
-        icon: 'people',
-        link: '/user',
       },
     );
   } else {
@@ -203,7 +197,6 @@ export default {
       fetchConfigurations: configurationTypes.actions.FETCH_CONFIGURATIONS,
     }),
     changeMenu(title) {
-      console.log(title);
       this.title = title;
     },
     onMainClick() {
