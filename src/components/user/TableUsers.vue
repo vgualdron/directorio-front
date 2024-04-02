@@ -1,7 +1,13 @@
 <template>
   <div class="q-pa-md">
-    <q-table title="Usuarios" :data="data" :columns="columns" row-key="name"
-      :selected.sync="selected" :loading="isLoadingTable" :filter="filter"
+    <q-table
+      v-if="data && data.length > 0"
+      title="Usuarios"
+      :data="data"
+      :columns="columns"
+      row-key="name"
+      :selected.sync="selected"
+      :loading="isLoadingTable" :filter="filter"
       :pagination.sync="pagination">
       <template v-slot:top>
         <q-btn color="primary" label="Agregar nuevo" @click="addRow" :disable="isDiabledAdd"/>
@@ -38,7 +44,7 @@
           </q-td>
           <q-td key="role" :props="props">
             <q-icon size="xs" name="edit" />
-            {{ optionsRoles.find((item) => props.row.role === item.value).label }}
+            {{ optionsRoles.find((item) => props.row.role === item.value) }}
             <q-popup-edit
               :value="optionsRoles.find((item) => props.row.role === item.value)"
               v-slot="scope"
