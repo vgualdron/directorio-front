@@ -96,7 +96,7 @@ export default {
         },
         {
           label: 'Lider',
-          value: 'lider',
+          value: 'leader',
         },
         {
           label: 'Ayudante',

@@ -140,6 +140,16 @@ if (user) {
         link: '/product',
       },
     );
+  } else if (roleUser.role === 'assistant') {
+    roleUserSesion = 'Asistente';
+    linksData.push(
+      {
+        title: 'Productos',
+        caption: 'Gestiona los productos',
+        icon: 'inbox',
+        link: '/product',
+      },
+    );
   } else {
     roleUserSesion = 'Usuario';
   }
